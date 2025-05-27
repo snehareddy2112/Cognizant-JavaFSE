@@ -1,38 +1,397 @@
-#Creating the HTML5 Base Template
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Event Portal</title>
+    <title>Community Event Portal - All Exercises</title>
+    <style>
+        /* Exercise 3 Styles */
+        #welcomeBanner {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 2px 5px;
+        }
+
+        /* Exercise 4 Styles */
+        .event-img {
+            width: 200px;
+            height: 150px;
+            border: 3px solid #2ecc71;
+            margin: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Exercise 5 Styles */
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label, input, select, textarea, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input, select, textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        output {
+            display: block;
+            margin-top: 10px;
+            color: green;
+        }
+
+        /* Exercise 6 Styles */
+        #feedbackForm {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        #enlargeable-img {
+            width: 200px;
+            cursor: pointer;
+            transition: width 0.3s;
+        }
+
+        /* Exercise 7 Styles */
+        #eventVideo {
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Section styling */
+        section {
+            margin: 40px 0;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Section -->
+    <!-- Exercise 1: HTML5 Base Template -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
+        <a href="#exercise1">Exercise 1</a>
+        <a href="#exercise2">Exercise 2</a>
+        <a href="#exercise3">Exercise 3</a>
+        <a href="#exercise4">Exercise 4</a>
+        <a href="#exercise5">Exercise 5</a>
+        <a href="#exercise6">Exercise 6</a>
+        <a href="#exercise7">Exercise 7</a>
+        <a href="#exercise8">Exercise 8</a>
+        <a href="#exercise9">Exercise 9</a>
+        <a href="#exercise10">Exercise 10</a>
     </nav>
 
-    <!-- Main Content Section -->
-    <main>
-        <section id="home">
-            <h1>Welcome to Our Community Portal</h1>
-        </section>
-        
-        <section id="events">
-            <h2>Upcoming Events</h2>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Us</h2>
-        </section>
-    </main>
+    <!-- Exercise 1 -->
+    <section id="exercise1">
+        <h1>Exercise 1: HTML5 Base Template</h1>
+        <p>Basic template structure already implemented in this file with:</p>
+        <ul>
+            <li>Proper DOCTYPE declaration</li>
+            <li>Semantic elements (nav, section, main, footer)</li>
+            <li>Character encoding meta tag</li>
+            <li>Viewport meta tag</li>
+        </ul>
+    </section>
 
-    <!-- Footer Section -->
+    <!-- Exercise 2 -->
+    <section id="exercise2">
+        <h1>Exercise 2: Navigation and Linking</h1>
+        <p>Implemented in the navigation bar at the top of this page with:</p>
+        <ul>
+            <li>Anchor tags linking to each exercise section</li>
+            <li>Proper section IDs matching href values</li>
+        </ul>
+    </section>
+
+    <!-- Exercise 3 -->
+    <section id="exercise3">
+        <h1>Exercise 3: Welcome Message with Styling</h1>
+        <div id="welcomeBanner">
+            Welcome back, <span class="highlight">Alice</span>! 
+            <span style="color: #e74c3c; font-weight: bold;">Today's special: 20% off event tickets!</span>
+        </div>
+    </section>
+
+    <!-- Exercise 4 -->
+    <section id="exercise4">
+        <h1>Exercise 4: Image Gallery for Community Events</h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="https://via.placeholder.com/200x150?text=Summer+Festival" 
+                         alt="Summer Festival" 
+                         title="Annual Summer Festival" 
+                         class="event-img">
+                    <p>Annual Summer Festival - June 2024</p>
+                </td>
+                <td>
+                    <img src="https://via.placeholder.com/200x150?text=Art+Exhibition" 
+                         alt="Art Exhibition" 
+                         title="Community Art Show" 
+                         class="event-img">
+                    <p>Community Art Show - July 2024</p>
+                </td>
+                <td>
+                    <img src="https://via.placeholder.com/200x150?text=Charity+Run" 
+                         alt="Charity Run" 
+                         title="5K Charity Run" 
+                         class="event-img">
+                    <p>5K Charity Run - August 2024</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Exercise 5 -->
+    <section id="exercise5">
+        <h1>Exercise 5: Event Registration Form</h1>
+        <form id="eventRegistration">
+            <h2>Event Registration</h2>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required autofocus 
+                   placeholder="Enter your full name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required 
+                   placeholder="your@email.com">
+            
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+            
+            <label for="eventType">Event Type:</label>
+            <select id="eventType" name="eventType" required>
+                <option value="">Select an event</option>
+                <option value="concert">Concert</option>
+                <option value="workshop">Workshop</option>
+                <option value="sports">Sports Event</option>
+            </select>
+            
+            <label for="message">Special Requests:</label>
+            <textarea id="message" name="message" 
+                      placeholder="Any special requirements?"></textarea>
+            
+            <button type="submit">Register</button>
+            
+            <output name="result" id="registrationResult"></output>
+        </form>
+    </section>
+
+    <!-- Exercise 6 -->
+    <section id="exercise6">
+        <h1>Exercise 6: Event Feedback with Events Handling</h1>
+        <div id="feedbackForm">
+            <h2>Event Feedback</h2>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" 
+                   placeholder="123-456-7890"
+                   onblur="validatePhone(this)">
+            
+            <label for="eventFee">Event Fee:</label>
+            <select id="eventFee" name="eventFee" 
+                    onchange="showFee(this)">
+                <option value="">Select fee type</option>
+                <option value="free">Free</option>
+                <option value="paid">Paid ($20)</option>
+            </select>
+            <p id="feeDisplay"></p>
+            
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" 
+                      onkeyup="countChars(this)"></textarea>
+            <p>Character count: <span id="charCount">0</span></p>
+            
+            <button onclick="submitFeedback()">Submit Feedback</button>
+            
+            <img src="https://via.placeholder.com/200x150?text=Event+Photo" 
+                 id="enlargeable-img"
+                 alt="Event Photo" 
+                 ondblclick="enlargeImage(this)">
+        </div>
+    </section>
+
+    <!-- Exercise 7 -->
+    <section id="exercise7">
+        <h1>Exercise 7: Video Invite with Media Events</h1>
+        <video id="eventVideo" width="400" controls
+               oncanplay="videoReady()">
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            Your browser doesn't support HTML5 video.
+        </video>
+        <p id="videoStatus">Loading video...</p>
+    </section>
+
+    <!-- Exercise 8 -->
+    <section id="exercise8">
+        <h1>Exercise 8: Saving User Preferences</h1>
+        <select id="eventTypePreference">
+            <option value="">Select your preferred event type</option>
+            <option value="music">Music</option>
+            <option value="sports">Sports</option>
+            <option value="art">Art</option>
+        </select>
+
+        <button onclick="savePreference()">Save Preference</button>
+        <button onclick="clearPreferences()">Clear Preferences</button>
+        <p id="prefStatus"></p>
+    </section>
+
+    <!-- Exercise 9 -->
+    <section id="exercise9">
+        <h1>Exercise 9: Geolocation for Event Mapping</h1>
+        <button onclick="findNearbyEvents()">Find Nearby Events</button>
+        <p id="locationStatus"></p>
+        <p id="coordinates"></p>
+    </section>
+
+    <!-- Exercise 10 -->
+    <section id="exercise10">
+        <h1>Exercise 10: Debugging with Chrome DevTools</h1>
+        <p>Open Chrome DevTools (F12) to:</p>
+        <ul>
+            <li>View console logs in the Console tab</li>
+            <li>Inspect elements in the Elements tab</li>
+            <li>Debug JavaScript in the Sources tab</li>
+        </ul>
+        <button onclick="testDebugging()">Test Debugging Function</button>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Community Portal</p>
+        <p>Community Event Portal &copy; 2024</p>
     </footer>
+
+    <script>
+        // Exercise 5 Form Handling
+        document.getElementById('eventRegistration').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('registrationResult').value = "Registration successful!";
+        };
+
+        // Exercise 6 Functions
+        function validatePhone(input) {
+            if (!/^\d{3}-\d{3}-\d{4}$/.test(input.value)) {
+                alert("Please enter phone in 123-456-7890 format");
+                input.focus();
+            }
+        }
+        
+        function showFee(select) {
+            const feeDisplay = document.getElementById('feeDisplay');
+            feeDisplay.textContent = select.value === 'paid' ? "Fee: $20" : "Free Event";
+        }
+        
+        function countChars(textarea) {
+            document.getElementById('charCount').textContent = textarea.value.length;
+        }
+        
+        function submitFeedback() {
+            alert("Feedback submitted!");
+        }
+        
+        function enlargeImage(img) {
+            img.style.width = img.style.width === "200px" ? "400px" : "200px";
+        }
+
+        // Exercise 7 Functions
+        function videoReady() {
+            document.getElementById('videoStatus').textContent = "Video ready to play!";
+        }
+
+        // Exercise 8 Functions
+        window.onload = function() {
+            const savedPref = localStorage.getItem('eventPreference');
+            if (savedPref) {
+                document.getElementById('eventTypePreference').value = savedPref;
+                document.getElementById('prefStatus').textContent = "Loaded saved preference!";
+            }
+        };
+        
+        function savePreference() {
+            const pref = document.getElementById('eventTypePreference').value;
+            localStorage.setItem('eventPreference', pref);
+            document.getElementById('prefStatus').textContent = "Preference saved!";
+        }
+        
+        function clearPreferences() {
+            localStorage.removeItem('eventPreference');
+            sessionStorage.clear();
+            document.getElementById('prefStatus').textContent = "Preferences cleared!";
+            document.getElementById('eventTypePreference').value = "";
+        }
+
+        // Exercise 9 Functions
+        function findNearbyEvents() {
+            const status = document.getElementById('locationStatus');
+            const coords = document.getElementById('coordinates');
+            
+            if (!navigator.geolocation) {
+                status.textContent = "Geolocation is not supported by your browser";
+                return;
+            }
+            
+            status.textContent = "Locating...";
+            
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    coords.textContent = `Latitude: ${lat}, Longitude: ${lon}`;
+                    status.textContent = "Location found! Loading nearby events...";
+                },
+                function(error) {
+                    status.textContent = 
+                        error.code === error.PERMISSION_DENIED 
+                        ? "Permission denied. Please enable location access." 
+                        : "Error getting location";
+                },
+                { enableHighAccuracy: true, timeout: 10000 }
+            );
+        }
+
+        // Exercise 10 Functions
+        function testDebugging() {
+            console.log("This is a test message for debugging");
+            debugger; // This will trigger a breakpoint
+            alert("Check the console and debugger!");
+        }
+
+        // Beforeunload event for Exercise 7
+        window.onbeforeunload = function() {
+            return "Are you sure you want to leave?";
+        };
+    </script>
 </body>
 </html>
